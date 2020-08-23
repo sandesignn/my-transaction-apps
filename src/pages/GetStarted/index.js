@@ -20,6 +20,12 @@ const GetStarted = () => {
         <Button title="Login" />
         <Button title="Register" />
       </View>
+      <View>
+        <Text style={styles.term}>
+          By logging in or register, I agree to our Term Of Service and Police
+          Service
+        </Text>
+      </View>
     </View>
   );
 };
@@ -40,15 +46,22 @@ const styles = StyleSheet.create({
   welcomeText: {
     marginTop: 92,
     fontWeight: 'bold',
-    fontSize: 22,
+    fontSize: 24,
+    fontFamily: 'Alata-Reguler',
   },
   descText: {
     marginTop: 7,
     fontSize: 14,
     color: '#4F4F4F',
+    fontFamily: 'Alata-Reguler',
   },
   button: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  term: {
+    fontFamily: 'Alata-Reguler',
+    color: '#4F4F4F',
+    fontSize: 12,
   },
 });

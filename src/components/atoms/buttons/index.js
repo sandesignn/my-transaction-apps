@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#07689F',
     paddingVertical: 15,
     borderRadius: 5,
-    width: 190,
+    width: 185,
   },
   text: {
     color: 'white',
@@ -24,5 +24,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textTransform: 'uppercase',
     textAlign: 'center',
+    fontFamily: 'Alata-Reguler',
   },
 });
