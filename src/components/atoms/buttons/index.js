@@ -1,9 +1,9 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 const Button = ({type, title, onPress}) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity style={styles.container(type)} onPress={onPress}>
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
@@ -12,18 +12,18 @@ const Button = ({type, title, onPress}) => {
 export default Button;
 
 const styles = StyleSheet.create({
-  container: {
+  container: (type) => ({
     backgroundColor: '#07689F',
     paddingVertical: 15,
-    borderRadius: 5,
-    width: 185,
-  },
+    borderRadius: type === 'started' ? 5 : 0,
+    flex: type === 'started' ? 1 : 0,
+  }),
   text: {
     color: 'white',
     fontSize: 14,
     fontWeight: 'bold',
     textTransform: 'uppercase',
     textAlign: 'center',
-    fontFamily: 'Alata-Reguler',
+    fontFamily: 'Alata-Regular',
   },
 });

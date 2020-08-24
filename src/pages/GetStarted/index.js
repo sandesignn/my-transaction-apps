@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {ILLogoGS, ILGetStarted} from '../../assets';
-import {Button} from '../../components';
+import {Button, Gap} from '../../components';
 
 const GetStarted = ({navigation}) => {
   return (
@@ -17,9 +17,15 @@ const GetStarted = ({navigation}) => {
         </Text>
       </View>
       <View style={styles.button}>
-        <Button title="Login" onPress={() => navigation.navigate('Login')} />
+        <Button
+          type="started"
+          title="Login"
+          onPress={() => navigation.navigate('Login')}
+        />
+        <Gap width={10} height={0} />
         <Button
           title="Register"
+          type="started"
           onPress={() => navigation.navigate('Register')}
         />
       </View>
@@ -50,20 +56,19 @@ const styles = StyleSheet.create({
     marginTop: 92,
     fontWeight: 'bold',
     fontSize: 24,
-    fontFamily: 'Alata-Reguler',
+    fontFamily: 'Alata-Regular',
   },
   descText: {
     marginTop: 7,
     fontSize: 14,
     color: '#4F4F4F',
-    fontFamily: 'Alata-Reguler',
+    fontFamily: 'Alata-Regular',
   },
   button: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
   },
   term: {
-    fontFamily: 'Alata-Reguler',
+    fontFamily: 'Alata-Regular',
     color: '#4F4F4F',
     fontSize: 12,
   },
