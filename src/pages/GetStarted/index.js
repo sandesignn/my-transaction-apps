@@ -3,7 +3,7 @@ import {Text, View, StyleSheet} from 'react-native';
 import {ILLogoGS, ILGetStarted} from '../../assets';
 import {Button} from '../../components';
 
-const GetStarted = () => {
+const GetStarted = ({navigation}) => {
   return (
     <View style={styles.page}>
       <ILLogoGS />
@@ -17,8 +17,11 @@ const GetStarted = () => {
         </Text>
       </View>
       <View style={styles.button}>
-        <Button title="Login" />
-        <Button title="Register" />
+        <Button title="Login" onPress={() => navigation.navigate('Login')} />
+        <Button
+          title="Register"
+          onPress={() => navigation.navigate('Register')}
+        />
       </View>
       <View>
         <Text style={styles.term}>

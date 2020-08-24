@@ -1,8 +1,14 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, {useEffect} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {ILLogo} from '../../assets';
 
-const Splash = () => {
+const Splash = ({navigation}) => {
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.replace('GetStarted');
+    }, 3000);
+  }, []);
   return (
     <View style={styles.page}>
       <ILLogo />
