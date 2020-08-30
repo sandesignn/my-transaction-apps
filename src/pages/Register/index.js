@@ -1,12 +1,20 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Back, ILRegister} from '../../assets';
 import {Input, Button, Gap} from '../../components/atoms';
 import {TouchableOpacity, ScrollView} from 'react-native-gesture-handler';
 import {colors} from '../../utils/colors';
+import {useForm} from '../../utils/useForm';
 
 const Register = ({navigation}) => {
-  console.log('Hello Console');
+  const [form, setForm] = useForm({
+    fullname: '',
+    email: '',
+    password: '',
+  });
+  const onContinue = () => {
+    console.log(form);
+  };
   return (
     <View style={styles.page}>
       <TouchableOpacity
@@ -26,20 +34,32 @@ const Register = ({navigation}) => {
         </View>
         <Gap height={22} />
         <View>
-          <Input label="fullname" placeholder="e.g Merry Jane" />
+          <Input
+            label="fullname"
+            placeholder="e.g Merry Jane"
+            value={form.fullname}
+            onChangeText={(value) => setForm('fullname', value)}
+          />
           <Gap height={20} />
-          <Input label="email" placeholder="e.g name@mail.com" />
+          <Input
+            label="email"
+            placeholder="e.g name@mail.com"
+            value={form.email}
+            onChangeText={(value) => setForm('email', value)}
+          />
           <Gap height={20} />
           <Input
             label="password"
             placeholder="**********"
             secureTextEntry={true}
+            value={form.password}
+            onChangeText={(value) => setForm('password', value)}
           />
         </View>
         <Gap height={100} />
       </ScrollView>
       <View style={styles.btn}>
-        <Button title="Continue" />
+        <Button title="Continue" onPress={onContinue} />
       </View>
     </View>
   );
