@@ -1,8 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {Back, ILLogin, Eye} from '../../assets';
+import {Back, ILLogin} from '../../assets';
 import {Input, Button, Gap} from '../../components/atoms';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {colors} from '../../utils/colors';
 
 const Login = ({navigation}) => {
   return (
@@ -42,8 +43,8 @@ export default Login;
 
 const styles = StyleSheet.create({
   page: {
-    padding: 20,
-    backgroundColor: 'white',
+    padding: 16,
+    backgroundColor: colors.white,
     flex: 1,
     justifyContent: 'space-between',
   },
@@ -52,10 +53,10 @@ const styles = StyleSheet.create({
     fontFamily: 'Alata-Regular',
     maxWidth: 258,
     fontWeight: 'bold',
-    color: '#393939',
+    color: colors.text.primary,
   },
   btn: {
-    margin: -20,
+    margin: -16,
   },
   illustration: {
     alignItems: 'center',

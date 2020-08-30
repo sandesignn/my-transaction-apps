@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {ILLogoGS, ILGetStarted} from '../../assets';
 import {Button, Gap} from '../../components';
+import {colors} from '../../utils/colors';
 
 const GetStarted = ({navigation}) => {
   return (
@@ -44,7 +45,7 @@ export default GetStarted;
 const styles = StyleSheet.create({
   page: {
     padding: 16,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     flex: 1,
     justifyContent: 'space-between',
   },
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
   descText: {
     marginTop: 7,
     fontSize: 14,
-    color: '#4F4F4F',
+    color: colors.text.secondary,
     fontFamily: 'Alata-Regular',
   },
   button: {
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
   },
   term: {
     fontFamily: 'Alata-Regular',
-    color: '#4F4F4F',
+    color: colors.text.secondary,
     fontSize: 12,
   },
 });

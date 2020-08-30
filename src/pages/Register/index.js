@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Back, ILRegister} from '../../assets';
 import {Input, Button, Gap} from '../../components/atoms';
 import {TouchableOpacity, ScrollView} from 'react-native-gesture-handler';
+import {colors} from '../../utils/colors';
 
 const Register = ({navigation}) => {
+  console.log('Hello Console');
   return (
     <View style={styles.page}>
       <TouchableOpacity
@@ -13,7 +15,7 @@ const Register = ({navigation}) => {
         }}>
         <Back />
       </TouchableOpacity>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Gap height={30} />
         <View style={styles.illustration}>
           <ILRegister />
@@ -47,7 +49,7 @@ export default Register;
 
 const styles = StyleSheet.create({
   page: {
-    padding: 20,
+    padding: 16,
     backgroundColor: 'white',
     flex: 1,
     justifyContent: 'space-between',
@@ -57,10 +59,10 @@ const styles = StyleSheet.create({
     fontFamily: 'Alata-Regular',
     maxWidth: 258,
     fontWeight: 'bold',
-    color: '#393939',
+    color: colors.text.primary,
   },
   btn: {
-    margin: -20,
+    margin: -16,
   },
   illustration: {
     alignItems: 'center',

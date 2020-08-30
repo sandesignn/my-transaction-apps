@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, TextInput} from 'react-native';
+import {colors} from '../../../utils/colors';
 
 const Input = ({label, placeholder, secureTextEntry}) => {
   return (
@@ -19,8 +20,8 @@ export default Input;
 const styles = StyleSheet.create({
   input: {
     borderBottomWidth: 1,
-    borderColor: '#BDBDBD',
-    color: '#5C5C5C',
+    borderColor: colors.border.primary,
+    color: colors.text.secondary,
     fontSize: 18,
     paddingVertical: 8,
     fontWeight: 'bold',
@@ -28,6 +29,6 @@ const styles = StyleSheet.create({
   },
   label: {
     fontFamily: 'Alata-Regular',
-    color: '#5C5C5C',
+    color: colors.text.secondary,
   },
 });
